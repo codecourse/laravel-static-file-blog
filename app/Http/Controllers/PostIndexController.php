@@ -9,8 +9,8 @@ class PostIndexController extends Controller
 {
     public function __invoke()
     {
-        dd(Sheets::collection('posts')->all());
-
-        return view('posts.index');
+        return view('posts.index', [
+            'posts' => Sheets::collection('posts')->all()->sortByDesc('date')
+        ]);
     }
 }

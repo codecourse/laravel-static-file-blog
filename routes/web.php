@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostIndexController;
+use App\Http\Controllers\PostShowController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', PostIndexController::class)->name('posts.index');
+Route::get('/{post}', PostShowController::class)->name('posts.show');

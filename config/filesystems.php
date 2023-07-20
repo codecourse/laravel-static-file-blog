@@ -30,6 +30,12 @@ return [
 
     'disks' => [
 
+        'posts' => [
+            'driver' => 'local',
+            'root' => storage_path('app/posts'),
+            'throw' => false,
+        ],
+
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),

@@ -4,5 +4,7 @@
         @foreach ($posts as $post)
             <x-post-list-item :post="$post" />
         @endforeach
+
+        {{ $posts->links() }}
     </div>
 </x-app-layout>

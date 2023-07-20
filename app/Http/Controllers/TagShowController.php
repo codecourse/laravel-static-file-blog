@@ -14,7 +14,8 @@ class TagShowController extends Controller
             ->all()
             ->filter(function (Post $post) use ($tag) {
                 return in_array($tag, $post->tags);
-            });
+            })
+            ->paginate(1);
 
         abort_if($posts->isEmpty(), 404);
 
